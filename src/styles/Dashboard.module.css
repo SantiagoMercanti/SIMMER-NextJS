@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
+  background: rgb(4, 108, 212);
+  height: 100vh;
+}
+
