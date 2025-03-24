@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #28517a;
+    position: relative;
+}
+
+/* BackBox: ¿Ya tienes cuenta? / ¿Aún no tienes una cuenta? */
+
+.backBox {
+    width: 100%;
+    max-width: 500px;
+    padding: 0px 20px;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 128, 255, 0.5);
+}
+
+.backBox div {
+    margin: 70px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.backBox div p,
+.backBox button {
+    margin-top: 30px;
+}
+
+.backBox div h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.backBox div h2 {
+    font-weight: 300;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.backBox div p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.backBox button {
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.backBox button:hover {
+    background: #fff;
+    color: #46A2FD;} 
+
+/* FrontBox: formularios */
+
+.frontBox {
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.frontBox .form {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+}
+
+.frontBox .form .formLogin {
+    padding: 70px 20px;
+}
+
+.frontBox .form .formRegister {
+    padding: 50px 20px;
+}
+
+.frontBox .form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+
+.frontBox .form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.frontBox .form button {
+    padding: 10px 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.frontBox .form button:hover {
+    background: #28517A;
+} 
+
+
