@@ -7,6 +7,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    min-width: 50vh;
 }
 
 .title {
@@ -18,12 +19,51 @@
 
 .list {
     background: rgba(235, 234, 234, 0.747);
+    border: #102235 2px solid;
+    width: 40vh;
+    max-height: 60vh;
     padding: 10px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
+
+    overflow-y: auto; /* Habilita el scroll vertical */
+    scrollbar-width: thin; /* Ajusta el tamaño del scrollbar en Firefox */
+    scrollbar-color: #46a2fd #e0e0e0; /* Color del scrollbar (borde y fondo) */
+}
+
+/* Estabilizador de scrollbar */
+.list::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+}
+.list::-webkit-scrollbar-thumb {
+    background-color: #46a2fd; /* Color del thumb (parte que se mueve) */
+    border-radius: 4px;
+}
+.list::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Fondo del scrollbar */
+}
+
+.listItem {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.listItem:hover {
+    background: #c7ebfc36;
+}
+
+.list p {
+    text-align: center;
+    margin: 0;
 }
 
 .createBtn {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import styles from "../../styles/ElementList.module.css";
+import styles from "app/styles/ElementList.module.css";
 
 interface Project {
     id: string;
@@ -11,11 +11,13 @@ export default function ProjectList() {
     const [projects, setProjects] = useState<Project[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:1880/projects") // URL de Node-RED
-            .then((res) => res.json())
-            .then((data) => setProjects(data))
+        fetch("https://jsonplaceholder.typicode.com/posts")
+            .then((res) => res.json()) // Convertir respuesta a JSON
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            .then((data) => setProjects(data.map((p: any) => ({ id: p.id, name: p.title })))) // Mapear datos al formato esperado
             .catch((err) => console.error("Error al obtener proyectos:", err));
     }, []);
+    
 
     return (
         <div className={styles.panel}>
@@ -23,10 +25,13 @@ export default function ProjectList() {
             <div className={styles.list}>
                 {projects.length > 0 ? (
                     projects.map((project) => (
-                        <button key={project.id}>{project.name}</button>
+                        <button 
+                        className={styles.listItem} 
+                        key={project.id}
+                        >{project.name}</button>
                     ))
                 ) : (
-                    <p>Cargando proyectos...</p>
+                    <p>No existen proyectos en el sistema.</p>
                 )}
             </div>
             <Link href="/newproject">
