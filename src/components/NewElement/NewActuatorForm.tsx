@@ -1,4 +1,4 @@
-import styles from "app/styles/newElement.module.css";
+import styles from "app/styles/NewElement.module.css";
 
 export default function NewActuatorDash() {
     return (
@@ -12,7 +12,7 @@ export default function NewActuatorDash() {
                     <input type="text" placeholder="Valor máximo" />
                     <input type="text" placeholder="Origen de datos" />
                     <input type="text" placeholder="Unidad de Medida" />
-                    <button>Crear Actuador</button>
+                    <button className={styles.createBtn}>Crear Actuador</button>
                 </form>
             </div>
         </main>
