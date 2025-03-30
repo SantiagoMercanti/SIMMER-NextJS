@@ -20,7 +20,7 @@
 
 .list {
     background: rgba(235, 234, 234, 0.747);
-    border: #102235 2px solid;
+    border: rgba(235, 234, 234, 0.747) 2px solid;
     width: 40vh;
     max-height: 60vh;
     padding: 10px;
@@ -33,6 +33,39 @@
     overflow-y: auto; /* Habilita el scroll vertical */
     scrollbar-width: thin; /* Ajusta el tamaño del scrollbar en Firefox */
     scrollbar-color: #46a2fd #e0e0e0; /* Color del scrollbar (borde y fondo) */
+}
+
+.checkList {
+    background: #f2f2f2;
+    border: rgba(235, 234, 234, 0.747) 2px solid;
+    width: 50vh;
+    max-height: 30vh;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    overflow-y: auto; /* Habilita el scroll vertical */
+    scrollbar-width: thin; /* Ajusta el tamaño del scrollbar en Firefox */
+    scrollbar-color: #46a2fd #e0e0e0; /* Color del scrollbar (borde y fondo) */
+}
+
+.checkList input[type="checkbox"] {
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.subtitle {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    font-family:  sans-serif;
+    font-weight: 500;
+    background: #f2f2f2;
+    color: #636262;
 }
 
 /* Estabilizador de scrollbar */
@@ -51,15 +84,16 @@
     background: white;
     padding: 10px;
     border-radius: 4px;
+    border: rgba(235, 234, 234, 0.747) 2px solid;
     display: flex;
     gap: 10px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     width: 100%;
 }
 
 .listItem:hover {
-    background: #c7ebfc36;
+    border-color: #28517a;
 }
 
 .list p {

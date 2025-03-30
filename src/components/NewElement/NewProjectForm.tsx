@@ -1,4 +1,5 @@
 import styles from "app/styles/NewElement.module.css"
+import NewProjectFormSensorList from "./NewProjectFormSensorList";
 
 export default function NewSensorForm() {
     return (
@@ -8,6 +9,7 @@ export default function NewSensorForm() {
                 <form className={styles.form}>
                     <input type="text" placeholder="Nombre" />
                     <input type="text" placeholder="Descripción" />
+                    <NewProjectFormSensorList/>
                     <button className={styles.createBtn}>Crear Proyecto</button>
                 </form>
             </div>
