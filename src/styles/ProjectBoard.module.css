@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: #28517a;
+  height: 100vh;
+}
+
+.box {
+  background-color: white;
+  padding: 40px;
+  min-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 {
+  font-size: 1.7rem;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 128, 255, 0.9);
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+
+.box h3 {
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #28517a;
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+
+.box p {
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+
+.modifyBtn {
+  padding: 10px 40px;
+  border: none;
+  font-size: 14px;
+  background: #46a2fd;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+.modifyBtn:hover {
+  background: #28517a;
+}

@@ -11,7 +11,7 @@ export default function NewSensorForm() {
                     <input type="text" placeholder="Valor mínimo" />
                     <input type="text" placeholder="Valor máximo" />
                     <input type="text" placeholder="Origen de datos" />
-                    <input type="text" placeholder="Unidad de Medida" />
+                    <input type="text" placeholder="Unidad de medida" />
                     <button className={styles.createBtn}>Crear Sensor</button>
                 </form>
             </div>

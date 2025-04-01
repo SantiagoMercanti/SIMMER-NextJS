@@ -34,6 +34,17 @@
   max-width: 800px;
 }
 
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaciado entre inputs */
+}
+
+.rightColumn {
+  display: flex;
+  justify-content: center; /* Centra el componente en su columna */
+}
+
 .form input {
   width: 100%;
   padding: 10px;
