@@ -1,4 +1,5 @@
 import styles from "app/styles/NewElement.module.css";
+import Link from "next/link";
 
 export default function NewActuatorDash() {
     return (
@@ -12,7 +13,9 @@ export default function NewActuatorDash() {
                     <input type="text" placeholder="Valor máximo" />
                     <input type="text" placeholder="Origen de datos" />
                     <input type="text" placeholder="Unidad de medida" />
-                    <button className={styles.createBtn}>Crear Actuador</button>
+                    <Link href={"/dashboard"}>
+                        <button className={styles.createBtn}>Crear Actuador</button>
+                    </Link>
                 </form>
             </div>
         </main>

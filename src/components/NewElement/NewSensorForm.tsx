@@ -1,4 +1,5 @@
 import styles from "app/styles/NewElement.module.css";
+import Link from "next/link";
 
 export default function NewSensorForm() {
     return (
@@ -12,7 +13,9 @@ export default function NewSensorForm() {
                     <input type="text" placeholder="Valor máximo" />
                     <input type="text" placeholder="Origen de datos" />
                     <input type="text" placeholder="Unidad de medida" />
-                    <button className={styles.createBtn}>Crear Sensor</button>
+                    <Link href={"/dashboard"}>
+                        <button className={styles.createBtn}>Crear Sensor</button>
+                    </Link>
                 </form>
             </div>
         </main>
