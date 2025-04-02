@@ -1,33 +1,53 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from "@mui/material";
 
-const SensorTable = () => {
-    const data = [
-        { sensor: "Temperatura", estado: 25, unidad: "grados", min: 17, max: 35 },
-        { sensor: "pH", estado: 5, unidad: "H+", min: 0, max: 14 },
-    ];
+interface Sensor {
+    sensor: string;
+    estado: number;
+    unidad: string;
+    min: number;
+    max: number;
+    historyUrl: string;
+}
 
+interface ProjectSensorsDataProps {
+    sensors: Sensor[];
+}
+
+export default function ProjectSensorsData({ sensors }: ProjectSensorsDataProps) {
     return (
-        <TableContainer component={Paper}>
-            <Table>
+        <TableContainer component={Paper} sx={{ maxHeight: 300, overflowY: "auto" }}>
+            <Table stickyHeader>
                 <TableHead>
-                    <TableRow sx={{ backgroundColor: "#28517a" }}>
-                        {["Sensor", "Estado", "Unidad", "Valor mínimo", "Valor máximo", "Registro histórico"].map((header) => (
-                            <TableCell key={header} sx={{ color: "#fff", fontWeight: "bold", textAlign: "center" }}>
+                    <TableRow>
+                        {["Sensor", "Estado", "Unidad", "Mínimo", "Máximo", "Registro histórico"].map((header) => (
+                            <TableCell
+                                key={header}
+                                align="center"
+                                sx={{ fontWeight: "bold", backgroundColor: "#28517a", color: "#fff" }}
+                            >
                                 {header}
                             </TableCell>
                         ))}
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {data.map((row, index) => (
+                    {sensors.map((sensor, index) => (
                         <TableRow key={index}>
-                            <TableCell>{row.sensor}</TableCell>
-                            <TableCell sx={{ fontWeight: "bold" }}>{row.estado}</TableCell>
-                            <TableCell>{row.unidad}</TableCell>
-                            <TableCell>{row.min}</TableCell>
-                            <TableCell>{row.max}</TableCell>
-                            <TableCell>
-                                <Button variant="contained" color="primary">Acceder</Button>
+                            <TableCell align="center">{sensor.sensor}</TableCell>
+                            <TableCell align="center" sx={{ fontWeight: "bold" }}>{sensor.estado}</TableCell>
+                            <TableCell align="center">{sensor.unidad}</TableCell>
+                            <TableCell align="center">{sensor.min}</TableCell>
+                            <TableCell align="center">{sensor.max}</TableCell>
+                            <TableCell align="center">
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    href={sensor.historyUrl} // Redirección al historial del sensor
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Acceder
+                                </Button>
                             </TableCell>
                         </TableRow>
                     ))}
@@ -35,6 +55,4 @@ const SensorTable = () => {
             </Table>
         </TableContainer>
     );
-};
-
-export default SensorTable;
+}
